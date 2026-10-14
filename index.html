@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Mi Primer Amor</title>
     <style>
-        @import url('https://googleapis.com');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Great+Vibes&display=swap');
 
         body {
             font-family: 'Montserrat', sans-serif;
@@ -34,15 +34,12 @@
             font-size: 3rem;
             margin-bottom: 10px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-            
-            /* Nuevas propiedades para alinear los extremos */
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
         }
 
-        /* Ajuste de tamaño para los iconos del título */
         h1 .icono-titulo {
             font-size: 2rem;
         }
@@ -110,21 +107,18 @@
             position: relative;
         }
 
-        /* Estilo especial destacado para la Frase 9 */
         .destacado-carmin {
-            color: #960018 !important; /* Color Carmín Intenso */
-            font-size: 1.35rem !important; /* Tamaño de letra más grande */
+            color: #960018 !important;
+            font-size: 1.35rem !important;
             font-weight: 600;
             line-height: 1.9;
         }
 
-        /* Botón de la frase 9 para avisar visualmente que es especial */
         .summary-destacada {
             color: #960018 !important;
             background-color: #fff5f6;
         }
 
-        /* Elementos gráficos decorativos */
         .decor {
             display: block;
             font-size: 1.5rem;
@@ -132,7 +126,6 @@
             color: #ff4d6d;
         }
 
-        /* Ajuste de color del adorno en la frase 9 */
         .decor-carmin {
             color: #960018 !important;
         }
@@ -144,6 +137,20 @@
             opacity: 0.7;
         }
 
+        /* Pantalla de bloqueo si está apagado */
+        #mensaje-apagado {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            color: #7d6368;
+        }
+        #mensaje-apagado h2 {
+            font-family: 'Great Vibes', cursive;
+            color: #d11a46;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -152,7 +159,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container" id="contenedor-principal">
     <h1>
         <span class="icono-titulo">❤️</span>
         Nuestro Reencuentro
@@ -160,7 +167,7 @@
     </h1>
     <p class="subtitle">Después de 50 años, la llama de nuestros corazones nunca se apagó...</p>
 
-    <!-- Frase 1 -->
+    <!-- Contenido de las frases -->
     <details>
         <summary>Frase 1 — El tiempo detenido</summary>
         <div class="content">
@@ -170,7 +177,6 @@
         </div>
     </details>
 
-    <!-- Frase 2 -->
     <details>
         <summary>Frase 2 — El destino</summary>
         <div class="content">
@@ -180,7 +186,6 @@
         </div>
     </details>
 
-    <!-- Frase 3 -->
     <details>
         <summary>Frase 3 — Mi mayor deseo</summary>
         <div class="content">
@@ -190,7 +195,6 @@
         </div>
     </details>
 
-    <!-- Frase 4 -->
     <details>
         <summary>Frase 4 — Mi único refugio</summary>
         <div class="content">
@@ -200,7 +204,6 @@
         </div>
     </details>
 
-    <!-- Frase 5 -->
     <details>
         <summary>Frase 5 — Presente y futuro</summary>
         <div class="content">
@@ -210,7 +213,6 @@
         </div>
     </details>
 
-    <!-- Frase 6 -->
     <details>
         <summary>Frase 6 — Compromiso eterno</summary>
         <div class="content">
@@ -220,7 +222,6 @@
         </div>
     </details>
 
-    <!-- Frase 7 -->
     <details>
         <summary>Frase 7 — Apoyo y calma</summary>
         <div class="content">
@@ -230,7 +231,6 @@
         </div>
     </details>
 
-    <!-- Frase 8 -->
     <details>
         <summary>Frase 8 — La plenitud del viaje</summary>
         <div class="content">
@@ -240,7 +240,6 @@
         </div>
     </details>
 
-    <!-- Frase 9 (DESTACADA) -->
     <details>
         <summary class="summary-destacada">Frase 9 — Mi prioridad absoluta ❤️</summary>
         <div class="content destacado-carmin">
@@ -249,8 +248,28 @@
             <span class="decor-bottom">👩‍❤️‍👨💖✨</span>
         </div>
     </details>
-
 </div>
+
+<!-- Mensaje cuando se apague -->
+<div class="container" id="mensaje-apagado">
+    <h2>Enlace Finalizado</h2>
+    <p>Este mensaje ya no se encuentra disponible. Gracias por formar parte de este hermoso viaje. ❤️</p>
+</div>
+
+<script>
+    // Carga el archivo de configuración externo para verificar si está activo
+    fetch('config.json?v=' + new Date().getTime())
+        .then(response => response.json())
+        .then(data => {
+            if (data.activo === false) {
+                document.getElementById('contenedor-principal').style.display = 'none';
+                document.getElementById('mensaje-apagado').style.display = 'block';
+            }
+        })
+        .catch(error => {
+            console.log('Funcionando en modo normal');
+        });
+</script>
 
 </body>
 </html>
