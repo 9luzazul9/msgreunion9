@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Primer Amor</title>
+    <style>
+        @import url('https://googleapis.com');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #ffeef2 0%, #ffd1dc 100%);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(224, 86, 118, 0.2);
+            border: 1px solid rgba(255, 182, 193, 0.5);
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            color: #d11a46;
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            
+            /* Nuevas propiedades para alinear los extremos */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Ajuste de tamaño para los iconos del título */
+        h1 .icono-titulo {
+            font-size: 2rem;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #7d6368;
+            font-weight: 300;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+
+        details {
+            background: #ffffff;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border: 1px solid #f0ccd4;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        details[open] {
+            border-color: #ff4d6d;
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.15);
+        }
+
+        summary {
+            padding: 18px 20px;
+            font-weight: 600;
+            color: #5c474b;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '🌹';
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary::after {
+            transform: rotate(45deg);
+            content: '💝';
+        }
+
+        .content {
+            padding: 0 25px 25px 25px;
+            color: #4a3b3e;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: center;
+            animation: fadeIn 0.4s ease-out;
+            position: relative;
+        }
+
+        /* Estilo especial destacado para la Frase 9 */
+        .destacado-carmin {
+            color: #960018 !important; /* Color Carmín Intenso */
+            font-size: 1.35rem !important; /* Tamaño de letra más grande */
+            font-weight: 600;
+            line-height: 1.9;
+        }
+
+        /* Botón de la frase 9 para avisar visualmente que es especial */
+        .summary-destacada {
+            color: #960018 !important;
+            background-color: #fff5f6;
+        }
+
+        /* Elementos gráficos decorativos */
+        .decor {
+            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ff4d6d;
+        }
+
+        /* Ajuste de color del adorno en la frase 9 */
+        .decor-carmin {
+            color: #960018 !important;
+        }
+
+        .decor-bottom {
+            display: block;
+            font-size: 1rem;
+            margin-top: 10px;
+            opacity: 0.7;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>
+        <span class="icono-titulo">❤️</span>
+        Nuestro Reencuentro
+        <span class="icono-titulo">💋</span>
+    </h1>
+    <p class="subtitle">Después de 50 años, la llama de nuestros corazones nunca se apagó...</p>
+
+    <!-- Frase 1 -->
+    <details>
+        <summary>Frase 1 — El tiempo detenido</summary>
+        <div class="content">
+            <span class="decor">❤️ Reencuentro ❤️</span>
+            Pasaron 50 años, pero mi corazón se detuvo en el mismo lugar; hoy mi única meta es consentirte y recordarte a cada hora que eres muy importante en mi vida.
+            <span class="decor-bottom">✨🕰️✨</span>
+        </div>
+    </details>
+
+    <!-- Frase 2 -->
+    <details>
+        <summary>Frase 2 — El destino</summary>
+        <div class="content">
+            <span class="decor">🌟 Destino 🌟</span>
+            El destino nos guardó el tiempo suficiente para entender que nuestro viaje nunca terminó; ahora que he regresado del pasado no descansaré para hacer que sonrías al despertar cada mañana.
+            <span class="decor-bottom">🌅🌸🌅</span>
+        </div>
+    </details>
+
+    <!-- Frase 3 -->
+    <details>
+        <summary>Frase 3 — Mi mayor deseo</summary>
+        <div class="content">
+            <span class="decor">💖 Amor Infinito 💖</span>
+            El tiempo pudo cambiar el mundo, pero no lo que siento por ti; mi mayor deseo en esta nueva oportunidad es dedicarme a que seas feliz.
+            <span class="decor-bottom">🕊️🌍🕊️</span>
+        </div>
+    </details>
+
+    <!-- Frase 4 -->
+    <details>
+        <summary>Frase 4 — Mi único refugio</summary>
+        <div class="content">
+            <span class="decor">🏡 Tu y Yo 🏡</span>
+            Después de media vida distanciados, estar a tu lado es mi oportunidad para entregarte lo mejor de mí y asegurarme de que nunca te falte alegría.
+            <span class="decor-bottom">☀️💞☀️</span>
+        </div>
+    </details>
+
+    <!-- Frase 5 -->
+    <details>
+        <summary>Frase 5 — Presente y futuro</summary>
+        <div class="content">
+            <span class="decor">💫 Un Nuevo Amanecer 💫</span>
+            No importa el ayer ni el camino que tomamos, mi presente y mi futuro es estar presente en tu vida; mi misión ahora es que veas un nuevo y mejor amanecer.
+            <span class="decor-bottom">🌱🎨🌱</span>
+        </div>
+    </details>
+
+    <!-- Frase 6 -->
+    <details>
+        <summary>Frase 6 — Compromiso eterno</summary>
+        <div class="content">
+            <span class="decor">💍 Promesa 💍</span>
+            Nuestra historia se pausó por 50 años, pero mi compromiso contigo hoy es eterno; quiero que cada segundo que compartamos sea perfecto y hecho solo para consentirte.
+            <span class="decor-bottom">⏳❤️⏳</span>
+        </div>
+    </details>
+
+    <!-- Frase 7 -->
+    <details>
+        <summary>Frase 7 — Apoyo y calma</summary>
+        <div class="content">
+            <span class="decor">🌙 Día y Noche 🌙</span>
+            Atesoro cada año que nos perdimos porque nos trajo de vuelta con más fuerza; de día seré tu apoyo constante y de noche tu calma, porque tu felicidad es mi prioridad.
+            <span class="decor-bottom">☀️🌌🤝</span>
+        </div>
+    </details>
+
+    <!-- Frase 8 -->
+    <details>
+        <summary>Frase 8 — La plenitud del viaje</summary>
+        <div class="content">
+            <span class="decor">🧳 Nuestro Viaje 🧳</span>
+            Al regresar a casa de este viaje deseo que te sientas plena y satisfecha y hayas disfrutado al máximo cada instante a mi lado.
+            <span class="decor-bottom">🥂🏡✨</span>
+        </div>
+    </details>
+
+    <!-- Frase 9 (DESTACADA) -->
+    <details>
+        <summary class="summary-destacada">Frase 9 — Mi prioridad absoluta ❤️</summary>
+        <div class="content destacado-carmin">
+            <span class="decor decor-carmin">🌹 Mi Todo 🌹</span>
+            En este viaje, mi prioridad absoluta eres tú; quiero complacerte en todo lo que tu desees y hacerte la mujer más feliz de día o de noche.
+            <span class="decor-bottom">👩‍❤️‍👨💖✨</span>
+        </div>
+    </details>
+
+</div>
+
+</body>
+</html>
